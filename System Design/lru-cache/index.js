@@ -55,7 +55,7 @@ class DoublyLinkedList {
   //   \ /
   //    4
   add (node) {
-    thid.connect(node, this.head.next)
+    this.connect(node, this.head.next)
     this.connect(this.head, node)
   }
 
@@ -66,7 +66,7 @@ class DoublyLinkedList {
     return lastNode
   }
 
-  moveToFront () {
+  moveToFront (node) {
     this.delete(node)
     this.add(node)
   }
@@ -76,7 +76,7 @@ class DoublyLinkedList {
     node2.prev = node1
   }
 
-  delete () {
+  delete (node) {
     this.connect(node.prev, node.next)
   }
 }
